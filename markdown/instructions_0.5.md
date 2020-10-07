@@ -1,66 +1,17 @@
-[VariantValidator.org](/)
+[<img src="https://github.com/openvar/VV_databases/blob/markdown/markdown/static/VV_logo.png?raw=true" width="20%" />](https://variantvalidator.org/)
 
--   [Home](/)
--   [Tools](#)
-    [Validator](/service/validate/) [Batch
-    Validator](/service/validate/batch/) [Genes to
-    Transcripts](/service/gene2trans/) [VCF to HGVS](/service/vcf2hgvs/)
-    [REST API](https://rest.variantvalidator.org/)
--   [Information](#)
-
-    [About](https://github.com/openvar/variantValidator/blob/master/README.md)
-    [Contact](/help/contact/)
-
-    [Batch Tool](/help/instructions/) [FAQs](/help/faq/)
-
-    [External Links](#)
-
-    ###### HGVS and UTA {.dropdown-header}
-
-    [HGVS library](https://github.com/biocommons/hgvs) [Universal
-    Transcript Archive](https://github.com/biocommons/uta/)
-
-    ###### HGVS Nomenclature {.dropdown-header}
-
-    [HGVS/varnomen](http://varnomen.hgvs.org/)
-
-    ###### Variant Databases {.dropdown-header}
-
-    [Locus Specific Database
-    list](http://grenada.lumc.nl/LSDB_list/lsdbs)
-    [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/)
-    [COSMIC](https://cancer.sanger.ac.uk/cosmic)
-
-    ###### Reference Sequence Portals {.dropdown-header}
-
-    [NCBI RefSeq](https://www.ncbi.nlm.nih.gov/refseq/) [Locus Reference
-    Genomic](http://www.lrg-sequence.org/)
-    [ENSEMBL](http://www.ensembl.org/index.html) [UCSC Genome
-    Browser](https://genome.ucsc.edu/cgi-bin/hgGateway)
-
-    ###### Similar Sites {.dropdown-header}
-
-    [Mutalyzer](https://mutalyzer.nl/)
-
--   [Raymond Dalgleish](#)
-    [Profile](/profile/)
-    [Sign Out](#)
-
-Batch Tool Help {.display-4 .text-white .mt-4 .mb-2}
-===============
+# VariantValidator Batch Tool Help
 
 Using the VariantValidator Batch Tool to validate variant descriptions
 
-![VariantValidator Logo](/static/img/logos/VV_logo.png)
-
 ### The basic steps:
 
-[VariantValidator](/ "VariantValidator Home Page") is a web-based tool
+[VariantValidator](https://variantvalidator.org/) is a web-based tool
 that allows the checking of human genome sequence variant descriptions
 for compliance with the HGVS Variant Nomenclature. Variants can be
 checked individually or multiple variant descriptions can be checked
 simultaneously by submitting them to the [Batch
-Validator](/service/validate/batch/ "Batch Validator").
+Validator](https://variantvalidator.org/service/validate/batch/).
 
 Variant descriptions are pasted into the Input Variant Descriptions data
 entry box with one description per line. Instructions are provided
@@ -70,9 +21,16 @@ expressed in the context of genome coordinates, but only those that fall
 into a particular gene or genes are of interest. HGNC gene symbols are
 used to impose gene search limits and the input is not case-sensitive.
 The results are returned to you by email, so you must enter a valid
-email address. Finally, you must select a genome build (GRCh38 or
-GRCh37) to allow the validation of variant descriptions, such as
-17-50198002-C-A or chr17:50198002C\>A, where the appropriate genome
+email address. 
+
+Finally, you must select a genome build *i.e.*
+- GRCh38
+- GRCh37
+
+to allow the validation of variant descriptions, such as
+
+- 17-50198002-C-A
+- chr17:50198002C\>A, where the appropriate genome
 build cannot be deduced from the description itself. Needless to say,
 it's not possible to simultaneously submit a mix of variant descriptions
 from both genome builds.
@@ -97,13 +55,15 @@ software patch as soon as possible to handle the issue.
 
 A short list of valid variant descriptions might look like this:
 
-    NM_000088.3:c.589G>T
-    NC_000017.10:g.48275363C>A
-    NG_007400.1:g.8638G>T
-    LRG_1:g.8638G>T
-    LRG_1t1:c.589G>T
-    17-50198002-C-A
-    chr17:50198002C>A
+```text
+NM_000088.3:c.589G>T
+NC_000017.10:g.48275363C>A
+NG_007400.1:g.8638G>T
+LRG_1:g.8638G>T
+LRG_1t1:c.589G>T
+17-50198002-C-A
+chr17:50198002C>A
+```
 
 Note that the final two variant descriptions are in the context of
 GRCh38. It's also worth noting that each of these seven variant
@@ -112,22 +72,24 @@ descriptions is valid and should return no error messages.
 The following variant descriptions are invalid and are each expected to
 return an error message:
 
-    NM_000088.3:c.589C>T
-    NC_000071.10:g.48275363C>A
-    NG_007400.2:g.8638G>T
-    LRG_1:g.8638G>N
-    LRG_1t3:c.589G>T
-    17-50198002-G-A
-    chr17:550198002C>A
-    COL5A1:c.5071A>T
-    NM_000088.3:c.589GG>CT
-    NM_000500.7:c.-107-19C>T
+ ```text
+NM_000088.3:c.589C>T
+NC_000071.10:g.48275363C>A
+NG_007400.2:g.8638G>T
+LRG_1:g.8638G>N
+LRG_1t3:c.589G>T
+17-50198002-G-A
+chr17:550198002C>A
+COL5A1:c.5071A>T
+NM_000088.3:c.589GG>CT
+NM_000500.7:c.-107-19C>T
+```
 
-Plain text files containing these variant descriptions can be downloaded
+Plain text files containing these variant descriptions can accessed
 as
-[valid\_variant\_test\_set.txt](/static/txt/valid_variant_test_set.txt)
+[valid_variant_test_set.txt](https://raw.githubusercontent.com/openvar/VV_databases/markdown/markdown/static/valid_variant_test_set.txt)
 and
-[invalid\_variant\_test\_set.txt](/static/txt/invalid_variant_test_set.txt)
+[invalid_variant_test_set.txt](https://raw.githubusercontent.com/openvar/VV_databases/markdown/markdown/static/invalid_variant_test_set.txt)
 
 ### What happens next?
 
@@ -195,10 +157,10 @@ The HGVS variant nomenclature guidelines do not require use of the most
 recent version.
 
 Example output files, derived form the example data above, can be
-downloaded as
-[valid\_variant\_test\_results.txt](/static/txt/valid_variant_test_results.txt)
+accessed as
+[valid_variant_test_results.txt](https://raw.githubusercontent.com/openvar/VV_databases/markdown/markdown/static/valid_variant_test_results.txt)
 and
-[invalid\_variant\_test\_results.txt](/static/txt/invalid_variant_test_results.txt)
+[invalid_variant_test_results.txt](https://raw.githubusercontent.com/openvar/VV_databases/markdown/markdown/static/invalid_variant_test_results.txt)
 
 Finally, and importantly, once you have imported your results into a
 spreadsheet, be sure to save the spreadsheet in its native Excel or Calc
@@ -212,7 +174,7 @@ descriptions for submission to VariantValidator, and we realise that
 many aspects of the HGVS nomenclature are difficult to comprehend (for
 expert and novice users alike). We encourage our users to contact us if
 they are having difficulty with reporting their sequence variants by
-filling in a [basic web form](/help/contact/). We will endeavour to
+filling in a [basic web form](https://variantvalidator.org/help/contact/). We will endeavour to
 contact you as soon as we can to provide you with the guidance that you
 require. Users can also report processing errors and make feature
 requests by contacting us on
@@ -233,19 +195,21 @@ errors, but are designed to provide useful guidance. Examples (in no
 particular order) of such warnings include:
 
 -   **A more recent version of the selected reference sequence
-    NM\_000022.2 is available (NM\_000022.3):**\
+    NM_000022.2 is available (NM_000022.3):**
      This is a specific example for RefSeq record NM\_000022. Although
     it is considered best-practice to report variants in the context of
     the most up-to-date reference sequence, HGVS does not demand this.
     Hence, it is up to the user, or perhaps the policy of journals in
     which they hope to publish results, whether they choose to use the
     updated description.
+    
 -   **No transcripts found that fully overlap the described variation in
-    the genomic sequence:**\
+    the genomic sequence:**
      Some genome sequence variants will lie outside of genes and will
     not project onto (align with) a gene transcript. Some variants might
     project only partially onto a transcript. In both instances, this
     warning will be generated.
+    
 -   **The current status of LRG\_XYZ is pending therefore changes may be
     made to the LRG reference sequence:**\
      Locus Reference Genomic (LRG) reference sequences may be made
@@ -253,6 +217,7 @@ particular order) of such warnings include:
     record being designated as being “Public”. Any LRG that is
     designated as being “Pending” is not stable and may be subject to
     change.
+    
 -   **This coding sequence variant description spans at least one
     intron; use of the corresponding genomic sequence variant
     descriptions may be invalid:**\
@@ -261,12 +226,14 @@ particular order) of such warnings include:
     such a deletion might not be due to a single mutational event and
     attempts to project the deletion from a transcript to the genome
     might be invalid.
+    
 -   **Protein level variant descriptions are not fully supported due to
     redundancy in the genetic code:**\
      VariantValidator can verify the syntax and the reference amino
     acid(s) specified in a protein-level variant description. However,
     it is impossible to project such a variant to a transcript or to the
     genome because of redundancy in the genetic code.
+    
 -   **RefSeqGene record not available:**\
      Only some genes have an NCBI RefSeqGene record. This warning simply
     indicates that no RefSeqGene record exists for the gene in which the
@@ -283,22 +250,16 @@ sequence variation descriptions.\
 Mutation* 39:61-68.
 [https://doi.org/10.1002/humu.23348](https://doi.org/10.1002/humu.23348)
 
-Raymond Dalgleish, Version 0.5, 4 June 2020
 
-[![University of Manchester
-Logo](/static/img/logos/Manchester_logo.png)](http://https://www.manchester.ac.uk/)
+### Document Version 0.5
+Raymond Dalgleish, 4 June 2020
 
 Copyright © 2020 VariantValidator Contributors
 
-[![University of Leicester
-Logo](/static/img/logos/uniofleicesterlogo.png)](http://le.ac.uk)
 
-##### Sign Out {#logoutModalLabel .modal-title}
+***
+[<img src="https://github.com/openvar/VV_databases/blob/markdown/markdown/static/Manchester_logo.png?raw=true" width="30%" />](http://https://www.manchester.ac.uk/)
 
-×
+<br>
 
-Are you sure you want to sign out?
-
-Cancel
-
-Sign Out
+[<img src="https://github.com/openvar/VV_databases/blob/markdown/markdown/static/uniofleicesterlogo.png?raw=true" width="30%" />](http://le.ac.uk)
