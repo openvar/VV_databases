@@ -15,7 +15,7 @@ $ git clone https://github.com/openvar/VV_databases.git
 ```
 
 ## Adding content
-In your local repository create a new branch to work on
+In your local repository create a new branch to work on.
 *Note, use a novel branch name*
 
 ```bash
@@ -30,7 +30,7 @@ To add files, create the file in your local repository, edit the file then use:
 # Only markdown files go in this folder and must have the file handle .md
 $ git add something.md
 ```
-You can also modify files the stage them for sending to GitHub using the same git add command
+You can also modify files then stage them for sending to GitHub using the same git add command
 
 ## Committing content and pushing to GitHub
 Add all the files you want to send to GitHub.
