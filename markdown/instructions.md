@@ -232,6 +232,9 @@ corrected automatically. The following errors require correction by the user:
     been submitted. It is simply not possible to validate varaint descriptions that
     contain uncertain (undefined) positions.
 
+-   **Failed to fetch NC_000071.10 from SeqRepo (/local/seqrepo/VV_SR_2021_2/master) (Alias NC_000071.10 (namespace: None)):**\
+    The submitted variant description in this example includes a reference sequence (NC_000071.10) that is not present in SeqRepo which is the sequence respository used by VariantValidator to store reference sequences. In this example, the error is caused by a typo: NC_000071.10 should be NC_000017.10 as the former is invalid because no such sequence accession/version exists. An error of this type might also be generated if a varaint is described in the context of a valid reference sequence that happens not to be present in SeqRepo. That might occur for legacy transcript reference sequences that map to neither GRCh37 nor GRCh38, or have been formally retired by NCBI.
+
 ****
 
 ## Warnings that are not errors, but are provided as guidance:
@@ -350,8 +353,8 @@ This publication is Open Access.
 
 ****
 
-## Document Version 1.0.0
-Raymond Dalgleish, 10 August 2021
+## Document Version 1.0.1
+Raymond Dalgleish, 19 August 2021
 
 Copyright © 2021 VariantValidator Contributors
 
