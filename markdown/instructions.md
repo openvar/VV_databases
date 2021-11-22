@@ -359,8 +359,8 @@ This publication is Open Access.
 
 ****
 
-## Document Version 1.0.1
-Raymond Dalgleish, 19 August 2021
+## Document Version 1.0.2
+Raymond Dalgleish, 22 November 2021
 
 Copyright © 2021 VariantValidator Contributors
 
